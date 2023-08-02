@@ -13,21 +13,21 @@
 1. Clone o repositório:
 ```
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
-Ou baixe o arquivo;
+Ou baixe o arquivo; <br>
 
-Inserir na pasta htdocs - C:\xampp\htdocs (Windows) ou /opt/lampp/htdocs/ (Linux);
+Inserir na pasta htdocs - C:\xampp\htdocs (Windows) ou /opt/lampp/htdocs/ (Linux);<br>
 
-Rodar servidor Apache;
+Rodar servidor Apache;<br>
 
-Cd Frontend - npm i (instalar dependências);
+Cd Frontend - npm i (instalar dependências);<br>
 
-npm run build (cria versão otimizada e pronta para produção do aplicativo);
+npm run build (cria versão otimizada e pronta para produção do aplicativo);<br>
 
-Cd Backend - npm i (instalar dependências);
+Cd Backend - npm i (instalar dependências);<br>
 
-Nodemon app.js (rodar Api e comunicação com db);
+Nodemon app.js (rodar Api e comunicação com db);<br>
 
-Acessar no navegador: Localhost/Nome_da_pasta (Meu_projeto)
+Acessar no navegador: Localhost/Nome_da_pasta (Meu_projeto)<br>
 ```
 
 ## Possíveis erros
