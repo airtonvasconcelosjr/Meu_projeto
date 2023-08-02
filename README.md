@@ -13,6 +13,7 @@
 1. Clone o repositório:
 ```
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```
 Ou baixe o arquivo; <br>
 
 Inserir na pasta htdocs - C:\xampp\htdocs (Windows) ou /opt/lampp/htdocs/ (Linux);<br>
@@ -28,7 +29,7 @@ Cd Backend - npm i (instalar dependências);<br>
 Nodemon app.js (rodar Api e comunicação com db);<br>
 
 Acessar no navegador: Localhost/Nome_da_pasta (Meu_projeto)<br>
-```
+
 
 ## Possíveis erros
 O sistema pode não identificar automáticamente os componentes criados no npm run build, e pode se fazer necessário a atualização manual do nome dos arquivos no index.html
