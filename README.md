@@ -39,9 +39,9 @@ O sistema pode não identificar automáticamente os componentes criados no npm r
 ![image](https://github.com/airtonvasconcelosjr/Meu_projeto/assets/101413097/3d09fc9c-ec09-49ff-b82d-6983a98df2c8)<br>
 
  > O endereço da background-image está saindo incorreto; <br>
- body{background-image:url(/img/bg.52d990f9.jpg) ;<br>
+``` body{background-image:url(/img/bg.52d990f9.jpg) ; ```<br>
  enquanto o correto é;<br>
- body{background-image:url(../img/bg.52d990f9.jpg);
+``` body{background-image:url(../img/bg.52d990f9.jpg); ```
 
 
 Contribuição
