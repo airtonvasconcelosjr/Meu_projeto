@@ -216,7 +216,7 @@ export default {
 
 <style>
 body {
-  background-image: url("./assets/bg.jpg");
+  background-image: url(../dist/img/bg.52d990f9.jpg);
   background-size: 150%;
   background-position: center;
   margin: 0;
