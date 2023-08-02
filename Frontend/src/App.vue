@@ -258,7 +258,7 @@ body {
 
 /* Estilo do card da task */
 .task-card {
-  width: calc(15% - 20px);
+  width: 200px; 
   height: 150px; 
   margin: 10px 0;
   padding: 10px;
@@ -266,7 +266,7 @@ body {
   border: 1px solid #0a4847; 
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  flex: 0 0 calc(15% - 20px); 
+  flex: 0 0 200px; 
   box-sizing: border-box; 
   display: flex;
   flex-direction: column;
@@ -316,7 +316,6 @@ span{
   margin: 0;
 }
 
-
 /* Estilo do input ao editar */
 .edited-input {
     width: 100px; 
@@ -324,4 +323,11 @@ span{
     border-color: rgb(229, 229, 229);
   }
 
+@media screen and (max-width: 600px) {
+  .task-card {
+    max-width: 100%; 
+  }
+  
+}
 </style>
+
