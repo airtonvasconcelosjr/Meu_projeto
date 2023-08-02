@@ -32,15 +32,15 @@ Acessar no navegador: Localhost/Nome_da_pasta (Meu_projeto)<br>
 
 
 ## Possíveis erros
-O sistema pode não identificar automáticamente os componentes criados no npm run build, e pode se fazer necessário a atualização manual do nome dos arquivos no index.html
-> Estes:
-![image](https://github.com/airtonvasconcelosjr/Meu_projeto/assets/101413097/7434d3da-9f08-45e9-9d2e-1c2cfe2478ac)
-> No lugar destes:
-![image](https://github.com/airtonvasconcelosjr/Meu_projeto/assets/101413097/3d09fc9c-ec09-49ff-b82d-6983a98df2c8)
+O sistema pode não identificar automáticamente os componentes criados no npm run build, e pode se fazer necessário a atualização manual do nome dos arquivos no index.html <br>
+> Estes:<br>
+![image](https://github.com/airtonvasconcelosjr/Meu_projeto/assets/101413097/7434d3da-9f08-45e9-9d2e-1c2cfe2478ac)<br>
+> No lugar destes:<br>
+![image](https://github.com/airtonvasconcelosjr/Meu_projeto/assets/101413097/3d09fc9c-ec09-49ff-b82d-6983a98df2c8)<br>
 
- O endereço da background-image está saindo incorreto;
- body{background-image:url(/img/bg.52d990f9.jpg) ;
- enquanto o correto é;
+ > O endereço da background-image está saindo incorreto; <br>
+ body{background-image:url(/img/bg.52d990f9.jpg) ;<br>
+ enquanto o correto é;<br>
  body{background-image:url(../img/bg.52d990f9.jpg);
 
 
