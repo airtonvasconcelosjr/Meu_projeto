@@ -16,19 +16,19 @@ git clone https://github.com/seu-usuario/nome-do-repositorio.git
 ```
 Ou baixe o arquivo; <br>
 
-Inserir na pasta htdocs - C:\xampp\htdocs (Windows) ou /opt/lampp/htdocs/ (Linux);<br>
+• Inserir na pasta htdocs - C:\xampp\htdocs (Windows) ou /opt/lampp/htdocs/ (Linux);<br>
 
-Rodar servidor Apache;<br>
+• Rodar servidor Apache;<br>
 
-Cd Frontend - npm i (instalar dependências);<br>
+• Cd Frontend - npm i (instalar dependências);<br>
 
-npm run build (cria versão otimizada e pronta para produção do aplicativo);<br>
+• npm run build (cria versão otimizada e pronta para produção do aplicativo);<br>
 
-Cd Backend - npm i (instalar dependências);<br>
+• Cd Backend - npm i (instalar dependências);<br>
 
-Nodemon app.js (rodar Api e comunicação com db);<br>
+• Nodemon app.js (rodar Api e comunicação com db);<br>
 
-Acessar no navegador: Localhost/Nome_da_pasta (Meu_projeto)<br>
+• Acessar no navegador: Localhost/Nome_da_pasta (Meu_projeto)<br>
 
 
 ## Possíveis erros
@@ -44,15 +44,14 @@ O sistema pode não identificar automáticamente os componentes criados no npm r
 ``` body{background-image:url(../img/bg.52d990f9.jpg); ```
 
 
-Contribuição
-Contribuições são bem-vindas! Se você deseja contribuir com este projeto, siga as etapas abaixo:
+## Contribuição
+Contribuições são bem-vindas! Se você deseja contribuir com este projeto, siga as etapas abaixo:<br>
 
-Fork este repositório
-Crie um branch para sua contribuição: git checkout -b feature/nova-funcionalidade
-Faça suas alterações e faça commit: git commit -m 'Adicionei uma nova funcionalidade'
-Envie suas alterações para o repositório remoto: git push origin feature/nova-funcionalidade
-Abra uma solicitação de pull para revisão
+## Fork este respositório
+Crie um branch para sua contribuição: git checkout -b feature/nova-funcionalidade <br>
+Faça suas alterações e faça commit: git commit -m 'Adicionei uma nova funcionalidade'<br>
+Envie suas alterações para o repositório remoto: git push origin feature/nova-funcionalidade<br>
+Abra uma solicitação de pull para revisão<br>
 
-
-Contato
+## Contato
 Se tiver alguma dúvida ou feedback, entre em contato em airton.vasconcelosjr@gmail.com.
