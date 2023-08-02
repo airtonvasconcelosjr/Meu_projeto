@@ -11,18 +11,24 @@
 ## Instalação
 
 1. Clone o repositório:
-   ```shell
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
 Ou baixe o arquivo;
+
 Inserir na pasta htdocs - C:\xampp\htdocs (Windows) ou /opt/lampp/htdocs/ (Linux);
+
 Rodar servidor Apache;
+
 Cd Frontend - npm i (instalar dependências);
-npm run build (cria versão otimizada e pronta para produção do aplicativo); 
+
+npm run build (cria versão otimizada e pronta para produção do aplicativo);
+
 Cd Backend - npm i (instalar dependências);
+
 Nodemon app.js (rodar Api e comunicação com db);
 
 Acessar no navegador: Localhost/Nome_da_pasta (Meu_projeto)
-
+```
 
 ## Possíveis erros
 O sistema pode não identificar automáticamente os componentes criados no npm run build, e pode se fazer necessário a atualização manual do nome dos arquivos no index.html
