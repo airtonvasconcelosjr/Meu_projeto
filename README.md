@@ -43,6 +43,18 @@ O sistema pode não identificar automáticamente os componentes criados no npm r
  enquanto o correto é;<br>
 ``` body{background-image:url(../img/bg.52d990f9.jpg); ```
 
+## Possíveis erros
+No caso de insucesso pode-se seguir estes passos: <br>
+
+• Cd Backend - npm i (instalar dependências);<br>
+
+• Nodemon app.js (rodar Api e comunicação com db);<br>
+
+• Cd Frontend - npm i (instalar dependências);<br>
+
+• Npm run serve (rodar servidor pelo Vue Cli);<br> 
+
+
 
 ## Contribuição
 Contribuições são bem-vindas! Se você deseja contribuir com este projeto, siga as etapas abaixo:<br>
