@@ -35,7 +35,7 @@ app.get('/tasks', (req, res) => {
 
 // Rota para criar tasks
 app.post('/tasks', (req, res) => {
-  const { title, description } = req.body;
+  const { title, description, status } = req.body;
   const newTask = new Task({ title, description }); 
   newTask.save()
     .then((task) => {

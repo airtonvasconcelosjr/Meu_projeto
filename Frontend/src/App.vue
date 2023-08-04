@@ -149,7 +149,7 @@ export default {
       }
   },
     toggleTaskStatus(taskId, status) {
-        const updatedStatus = status ? 'pendente' : 'concluída';
+        const updatedStatus = status ? 'concluída' : 'pendente'  ;
 
         const updatedTask = {
           status: updatedStatus,
@@ -216,7 +216,7 @@ export default {
     },
 
     getTaskIcon(task) {
-      return task.status === 'concluida' ? 'check-circle' : 'circle';
+      return task.status === 'concluída' ? 'check-circle' : 'circle';
     },
   },
 };
