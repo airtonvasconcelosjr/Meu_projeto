@@ -43,7 +43,7 @@
           </button>
           <button @click="toggleTaskStatus(task._id, task.status)">
             <font-awesome-icon :icon="getTaskIcon(task)" />
-            <span>{{ task.status === 'concluída' ? '' : '' }}</span>
+            <span>{{ task.status === 'concluída' ? ' Done' : ' Undone' }}</span>
           </button>
         </div>
       </div>
@@ -60,6 +60,7 @@ export default {
       tasks: [],
       newTaskTitle: '',
       newTaskDescription: '',
+      newTaskStatus: '', 
       isEditing: false,
       editedTaskId: null,
       editedTaskTitle: '',
@@ -86,9 +87,14 @@ export default {
     },
     addTask() {
       const newTask = {
-        title: this.newTaskTitle,
-        description: this.newTaskDescription,
-      };
+    title: this.newTaskTitle,
+    description: this.newTaskDescription,
+    status: this.newTaskStatus,
+  };
+
+  if (this.newTaskStatus) {
+    newTask.status = this.newTaskStatus;
+  }
 
       axios
         .post('http://localhost:5000/tasks', newTask)
@@ -98,6 +104,8 @@ export default {
 
           this.newTaskTitle = '';
           this.newTaskDescription = '';
+          this.newTaskStatus = '';
+
         })
         .catch((error) => {
           console.error('Erro ao adicionar tarefa:', error);
@@ -216,7 +224,7 @@ export default {
 
 <style>
 body {
-  background-image: url(../dist/img/bg.52d990f9.jpg);
+  background-image: url(../src/assets/bg.jpg);
   background-size: 150%;
   background-position: center;
   margin: 0;

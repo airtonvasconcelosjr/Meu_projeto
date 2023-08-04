@@ -1,5 +1,3 @@
-// app.js
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -11,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors()); 
 
-// MongoDB Connection
+// MongoDB 
 const uri = 'mongodb+srv://airtonvasconcelosjr:airton1990@cluster0.pw72ph9.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(uri, {
@@ -24,7 +22,7 @@ mongoose.connect(uri, {
   console.log(e);
 });
 
-// Route to list all tasks
+// Rota para listar todas as tasks
 app.get('/tasks', (req, res) => {
   Task.find({})
     .then((tasks) => {
@@ -35,7 +33,7 @@ app.get('/tasks', (req, res) => {
     });
 });
 
-// Route to create a new task
+// Rota para criar tasks
 app.post('/tasks', (req, res) => {
   const { title, description } = req.body;
   const newTask = new Task({ title, description }); 
@@ -49,7 +47,7 @@ app.post('/tasks', (req, res) => {
 });
 
 
-// Route to update a task
+// Rota para atualizar task
 app.put('/tasks/:taskId', (req, res) => {
   const { taskId } = req.params;
   const { title, description, status } = req.body;
@@ -62,7 +60,7 @@ app.put('/tasks/:taskId', (req, res) => {
     });
 });
 
-// Route to delete a task
+// Rota para deletar task
 app.delete('/tasks/:taskId', (req, res) => {
   const taskId = req.params.taskId;
 
@@ -78,54 +76,8 @@ app.delete('/tasks/:taskId', (req, res) => {
     });
 });
 
-// Filter by title, status, or date
-app.get('/tasks/filter', (req, res) => {
-  const { title, status, date } = req.query;
 
-  const query = {};
-
-  if (title) {
-    query.title = { $regex: title, $options: 'i' };
-  }
-
-  if (status) {
-    query.status = status;
-  }
-
-  if (date) {
-    query.createdAt = { $gte: new Date(date) };
-  }
-
-  Task.find(query)
-    .then((tasks) => {
-      res.send(tasks);
-    })
-    .catch((error) => {
-      res.status(500).send({ error: 'Erro ao buscar tasks.' });
-    });
-});
-
-// Pagination (In case of many tasks)
-app.get('/tasks/pagination', (req, res) => {
-  const { page = 1, limit = 10 } = req.query;
-
-  const pageNumber = parseInt(page, 10);
-  const limitNumber = parseInt(limit, 10);
-
-  const skip = (pageNumber - 1) * limitNumber;
-
-  Task.find()
-    .skip(skip)
-    .limit(limitNumber)
-    .then((tasks) => {
-      res.send(tasks);
-    })
-    .catch((error) => {
-      res.status(500).send({ error: 'Erro ao buscar tasks.' });
-    });
-});
-
-// Start the server
+// Rodar servidor
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na port ${PORT}`);
