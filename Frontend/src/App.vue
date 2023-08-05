@@ -15,19 +15,22 @@
     </div>
 
     <!-- Lista de tarefas -->
-   
     <div class="center-container">
       <button class="cleanAll" @click="cleanTasks">
         Excluir tudo
         <font-awesome-icon icon="trash-alt" />
       </button>
       <input v-model="searchQuery" class="search" type="text" placeholder="Pesquisar" @keyup="searchWithDelay">
-        <button class="search-btn" @click="search">
-          <font-awesome-icon class="search-icon" icon="search" />
-        </button>
+      <button class="search-btn" @click="search">
+        <font-awesome-icon class="search-icon" icon="search" />
+      </button>
     </div>
+    
     <div class="center-container">
-      <span v-show="noTasks" class="no-task"> Nenhuma task para exibir!</span>
+      <div v-if="showSearchErrorMessage && searchResults.length === 0">
+        <span class="no-search"> Nenhuma task correspondente à pesquisa.</span>
+      </div>  
+      <span v-show="noTasks && !searchQuery" class="no-task"> Nenhuma task para exibir!</span>
     </div>
     <div class="task-container-wrapper">
       <div class="task-container">
@@ -40,7 +43,6 @@
             :placeholder="task.title"
             :class="{ 'edited-input': isEditing }" 
           >
-         
           <span v-if="!isEditing || task._id !== editedTaskId">{{ task.title }}</span>
 
           <h2 v-if="!isEditing || task._id !== editedTaskId">Descrição:</h2>
@@ -72,13 +74,13 @@
             </button>
           </div>
         </div>
-        <div v-if="showSearchErrorMessage">
-          <span> Nenhuma task correspondente à pesquisa.</span>
-        </div>  
       </div>
     </div>
+    
   </div>
 </template>
+
+<!-- Resto do seu código... -->
 
 
 <script>
@@ -293,34 +295,37 @@ export default {
       }
     },
 
-    search() {
-    if (this.searchQuery.trim() === '') {
-      this.searchResults = [];
-      return;
-    }
-
-    // Filtrar as tarefas com base na pesquisa
-    this.searchResults = this.tasks.filter(task => {
-      const lowerCaseQuery = this.searchQuery.toLowerCase();
-      const lowerCaseTitle = task.title.toLowerCase();
-      const lowerCaseDescription = task.description.toLowerCase();
-
-      return (
-        lowerCaseTitle.includes(lowerCaseQuery) ||
-        lowerCaseDescription.includes(lowerCaseQuery)
-      );
-    });
-  },
-  searchWithDelay() {
+    searchWithDelay() {
       clearTimeout(this.searchTimeout);
-      this.showSearchErrorMessage = false; // Redefine a propriedade
+      this.showSearchErrorMessage = false;
+
       this.searchTimeout = setTimeout(() => {
-        this.search();
-        if (this.searchResults.length === 0) {
-          this.showSearchErrorMessage = true; // Define a propriedade após o atraso
+        if (this.searchQuery.trim() === '') {
+          this.searchResults = [];
+          this.showSearchErrorMessage = false; // Redefine a mensagem de erro
+        } else {
+          this.searchResults = this.tasks.filter(task => {
+            const lowerCaseQuery = this.searchQuery.toLowerCase();
+            const lowerCaseTitle = task.title.toLowerCase();
+            const lowerCaseDescription = task.description.toLowerCase();
+
+            return (
+              lowerCaseTitle.includes(lowerCaseQuery) ||
+              lowerCaseDescription.includes(lowerCaseQuery)
+            );
+          });
+
+          if (this.searchResults.length === 0) {
+            this.showSearchErrorMessage = true;
+
+            setTimeout(() => {
+              this.showSearchErrorMessage = false;
+            }, 2000);
+          }
         }
       }, 500);
     },
+
   },
 };
 </script>
@@ -488,6 +493,8 @@ span{
   color: white;
 }
 
+
+/* Estilos input de pesquisar*/
 .search{
   margin: 2px 0 0 5px;
   border-radius: 5px;
@@ -498,23 +505,32 @@ span{
   padding-left: 10px;
 }
 
+/* Estilos fontawesome de pesquisar*/
 .search-icon{
   color: #0a4847;
   font-size: 12px;
   margin-left: -2.5rem;
 }
 
+/* Estilos botão lupa de pesquisar*/
 .search-btn{
   background-color: transparent;
   outline: none;
   border: none;
-  cursor: pointer;
 }
 
+
+/* Estilos placeholder de pesquisar*/
 .search::placeholder {
   color: #11716f;
   font-style: italic; 
   z-index: 1;  
+}
+
+/* Estilos da mensagem de erro caso pesquisa nao seja bem sucedida*/
+.no-search{
+  color: white;
+  font-size: 16px;
 }
 
 
