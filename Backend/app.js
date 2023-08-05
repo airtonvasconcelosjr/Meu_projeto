@@ -76,6 +76,18 @@ app.delete('/tasks/:taskId', (req, res) => {
     });
 });
 
+// Rota para deletar todas as task
+app.delete('/tasks', (req, res) => {
+  Task.deleteMany({})
+    .then(() => {
+      res.status(204).send();
+    })
+    .catch((error) => {
+      res.status(500).json({ error: 'Erro ao excluir todas as tarefas' });
+    });
+});
+
+
 
 // Rodar servidor
 const PORT = 5000;
