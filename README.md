@@ -3,7 +3,7 @@
 > Este app é um gerenciador de tarefas SPA (Single Page Application) feito utilizando como stacks: VueJs, Php e NodeJs.
 > Utiliza como database o Mongodb. 
 > Segue as seguintes diretivas:
-- Criação de rotas para realizar operações CRUD (Create, Read, Update, Delete).  Uso de bibliotecas adequadas para facilitar o desenvolvimento, como Express.js e Mongoose. b. Desenvolvimento de um frontend em Vue.js - Implementação de recursos como adicionar, editar, excluir e marcar tarefas como concluídas. - Utilização de componentes do Vue.js para modularizar a aplicação e facilitar a reutilização de código. c. Integração entre o frontend e a API: - Comunicação assíncrona entre o frontend e a API usando requisições HTTP. - Manipulação de respostas da API, incluindo tratamento de erros e exibição adequada das mensagens de retorno. d. Implementação de recursos adicionais: - Adicionar funcionalidades extras à aplicação, como pesquisa de tarefas.
+> Criação de rotas para realizar operações CRUD (Create, Read, Update, Delete).  Uso de bibliotecas adequadas para facilitar o desenvolvimento, como Express.js e Mongoose. b. Desenvolvimento de um frontend em Vue.js - Implementação de recursos como adicionar, editar, excluir e marcar tarefas como concluídas. - Utilização de componentes do Vue.js para modularizar a aplicação e facilitar a reutilização de código. c. Integração entre o frontend e a API: - Comunicação assíncrona entre o frontend e a API usando requisições HTTP. - Manipulação de respostas da API, incluindo tratamento de erros e exibição adequada das mensagens de retorno. d. Implementação de recursos adicionais: - Adicionar funcionalidades extras à aplicação, como pesquisa de tarefas.
 
 
 ## Capturas de Tela
