@@ -8,7 +8,8 @@
 
 ## Capturas de Tela
 
-![Captura de Tela]![image](https://github.com/airtonvasconcelosjr/Meu_projeto/assets/101413097/8c37dd56-3372-4839-ba1e-afe2701b2522)
+![Captura de Tela]![image](https://github.com/airtonvasconcelosjr/Meu_projeto/assets/101413097/5e04fe1b-44ca-43db-8d95-b36df96afaf4)
+
 
 ## Instalação
 
